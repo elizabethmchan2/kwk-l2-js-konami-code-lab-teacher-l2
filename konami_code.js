@@ -19,12 +19,12 @@ function init() {
   var index = 0;
   document.addEventListener('keydown', function(e) {
     const key = e.key;
-    
+     alert("Hurray!");
     if (key === codes[index]) {
       console.log(key + index)
       index++;
       if (index === codes.length) {
-        console.log('YEP')
+        console.log('YEP');
         alert("Hurray!");
         index = 0;
       }
