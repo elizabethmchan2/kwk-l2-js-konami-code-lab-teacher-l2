@@ -11,28 +11,15 @@ const codes = [
   "a"
 ];
 
-function onKeyDownHandler(e) {
-  const key = e.key;
- 
-  if (key === alphabet[index]) {
-    index++;
- 
-    if (index === alphabet.length) {
-      alert("Hurray!");
- 
-      index = 0;
-    }
-  } else {
-    index = 0;
-  }
-}
+
 
 
 function init() {
-  
+  const input = document.querySelector('input')
+ 
+  input.addEventListener('keydown', function(e) {
+    if (e.which === 71) {
+      return e.preventDefault()
+    }
+  })
 }
-
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
-  alert('keydown event\n\n' + 'key: ' + keyName);
-});
