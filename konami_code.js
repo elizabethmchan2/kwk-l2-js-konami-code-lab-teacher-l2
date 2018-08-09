@@ -24,6 +24,7 @@ function init() {
       console.log(key + index)
       index++;
       if (index === codes.length) {
+        console.log('YEP')
         alert("Hurray!");
         index = 0;
       }
