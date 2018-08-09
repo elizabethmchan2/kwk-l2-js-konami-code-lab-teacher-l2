@@ -16,10 +16,18 @@ const codes = [
 
 function init() {
   document.addEventListener('keydown', function(e) {
-    if (e.which === 71) {
-      return e.preventDefault()
+   const key = e.key;
+   
+    if (key === alphabet[index]) {
+      index++;
+   
+      if (index === alphabet.length) {
+        alert("Hurray!");
+   
+        index = 0;
+      }
     } else {
-      console.log(e.which)
+      index = 0;
     }
   })
 }
